@@ -1,0 +1,34 @@
+# Vercel
+.vercel
+.env*.local
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.claude/
+
+# Local backups / working assets not needed for deploy
+/index.old.html
+/*.zip
+/hallux_pack/
+/cartilhas_cinderela_braqui/
+/design-system/
+/assets/
