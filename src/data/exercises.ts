@@ -2,53 +2,6 @@ import type { ExerciseGroup } from '../types';
 
 export const exerciseGroups: ExerciseGroup[] = [
   {
-    id: 'global-mobility',
-    title: 'Mobilidade Global (Sem Carga no Antepé)',
-    phase: 'Semana 4-6 — mobilidade sem carga para evitar rigidez proximal',
-    exercises: [
-      {
-        id: 'posterior-chain-seated',
-        title: 'Alongamento de Cadeia Posterior Sentado',
-        description: 'Sentada com as pernas estendidas, incline o tronco à frente buscando os pés. Respeite o limite do pé operado e foque no alongamento de isquiotibiais e panturrilhas sem forçar o antepé.',
-        dosage: '30 segundos, 3 repetições',
-        image: '/assets/exercicios/08_big_toe_extension_stretch.jpg',
-        category: 'Alongamento global',
-      },
-      {
-        id: 'hip-mobility',
-        title: 'Mobilidade de Quadril',
-        description: 'Deitada ou sentada, realize círculos suaves e movimentos de flexão, extensão e abdução do quadril, sem carga no pé operado.',
-        dosage: '10 repetições em cada direção',
-        image: '/assets/exercicios/02_passive_movements.jpg',
-        category: 'Mobilidade',
-      },
-      {
-        id: 'knee-mobility',
-        title: 'Mobilidade de Joelho',
-        description: 'Sentada, realize movimentos de flexão e extensão do joelho do lado operado, sem apoiar o pé no chão.',
-        dosage: '15 repetições',
-        image: '/assets/exercicios/02_passive_movements.jpg',
-        category: 'Mobilidade',
-      },
-      {
-        id: 'ankle-mobility',
-        title: 'Mobilidade de Tornozelo',
-        description: 'Com o pé sem apoio, realize movimentos de dorsiflexão, flexão plantar e círculos com o tornozelo, respeitando o limite do curativo e sem forçar o hálux.',
-        dosage: '15 repetições em cada direção',
-        image: '/assets/exercicios/02_passive_movements.jpg',
-        category: 'Mobilidade',
-      },
-      {
-        id: 'plantar-fascia-ball',
-        title: 'Bola na Fáscia Plantar',
-        description: 'Sem a sandália, role uma bola de massagem sob a fáscia plantar (do calcanhar ao meio do pé) com carga leve a moderada. Evite a região operada (base do hálux e antepé). Serve para manter mobilidade da cadeia plantar sem estressar o antepé.',
-        dosage: '1-2 minutos por pé',
-        image: '/assets/exercicios/01_ball_release.jpg',
-        category: 'Liberação miofascial',
-      },
-    ],
-  },
-  {
     id: 'release-mobility',
     title: 'Liberação e Mobilidade',
     phase: 'A partir da semana 6 — quando liberado pela equipe',
