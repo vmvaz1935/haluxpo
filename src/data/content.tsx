@@ -32,7 +32,9 @@ export const phases: Phase[] = [
     ],
     exercises: [
       "Movimentos suaves dos dedos e tornozelo (quando liberado)"
-    ]
+    ],
+    image: "/assets/cartilha/05-phase-01-hv-protection-rest.png",
+    imageAlt: "Pé operado elevado em travesseiros com sandália cirúrgica"
   },
   {
     id: 2,
@@ -75,7 +77,9 @@ export const phases: Phase[] = [
       "A partir da 6ª semana — Alongamentos suaves do hálux (conforme tolerância)",
       "A partir da 6ª semana — Fortalecimento progressivo dos músculos do pé",
       "A partir da 6ª semana — Mobilização suave da cicatriz (quando liberado pela equipe)"
-    ]
+    ],
+    image: "/assets/cartilha/10-phase-02-hv-load-physiotherapy.png",
+    imageAlt: "Paciente progredindo carga com sandália cirúrgica acompanhada por fisioterapeuta"
   },
   {
     id: 3,
@@ -107,7 +111,9 @@ export const phases: Phase[] = [
       "Exercícios de fortalecimento específicos para o pé",
       "Treino de marcha e equilíbrio",
       "Exercícios funcionais com progressão gradual"
-    ]
+    ],
+    image: "/assets/cartilha/22-hv-phase-03-low-impact-exercise.png",
+    imageAlt: "Atividade de baixo impacto após liberação médica"
   }
 ];
 
@@ -132,7 +138,9 @@ export const generalGuidelines: Guideline[] = [
       "Enquanto isso, apenas reforce com gaze estéril por cima em caso de pequeno sangramento",
       "Não aplicar pomadas, cremes ou qualquer substância",
       "Liberação dos curativos prevista por volta da 6ª semana"
-    ]
+    ],
+    image: "/assets/cartilha/06-hv-intact-dressing.png",
+    imageAlt: "Curativo limpo, seco e intacto com símbolos de não molhar e não manipular"
   },
   {
     id: 'sandal',
@@ -143,7 +151,9 @@ export const generalGuidelines: Guideline[] = [
       "A sandália protege a sola e evita carga descalça",
       "Nunca pisar descalça, mesmo dentro de casa",
       "Carga parcial somente com a sandália"
-    ]
+    ],
+    image: "/assets/cartilha/07-hv-surgical-sandal-forefoot.png",
+    imageAlt: "Sandália cirúrgica de descarga do antepé"
   },
   {
     id: 'elevation',
@@ -154,7 +164,9 @@ export const generalGuidelines: Guideline[] = [
       "Evitar caminhar longas distâncias ou ficar longos períodos em pé",
       "Evitar subir e descer escadas repetidamente",
       "Fazer apenas atividades necessárias dentro de casa"
-    ]
+    ],
+    image: "/assets/cartilha/08-hv-foot-elevation-edema-control.png",
+    imageAlt: "Pé elevado sobre travesseiros para controle de edema"
   },
   {
     id: 'ice',
@@ -164,7 +176,9 @@ export const generalGuidelines: Guideline[] = [
       "Não utilizar gelo no pós-operatório",
       "O curativo não permite passagem adequada de frio",
       "Para controle de edema: repouso, elevação do pé e uso contínuo da sandália"
-    ]
+    ],
+    image: "/assets/cartilha/09-hv-dos-and-donts-no-ice.png",
+    imageAlt: "Checklist do que fazer e do que evitar, incluindo não usar gelo"
   },
   {
     id: 'scar',
@@ -175,7 +189,9 @@ export const generalGuidelines: Guideline[] = [
       "Mobilização manual e massagem ajudam a reduzir rigidez, aderências, dor e coceira",
       "O objetivo é melhorar mobilidade do tecido e conforto no uso do calçado",
       "A progressão respeita a técnica cirúrgica e a fase de cicatrização — sempre com orientação da equipe"
-    ]
+    ],
+    image: "/assets/cartilha/13-hv-scar-care-massage.png",
+    imageAlt: "Massagem suave ao redor da cicatriz cirúrgica"
   }
 ];
 
@@ -188,7 +204,9 @@ export const dailyActivities: DailyActivity[] = [
       "Usar a sandália cirúrgica durante o banho (protege a sola)",
       "Não molhar o curativo em hipótese alguma",
       "Se necessário, proteger com plástico/bolsa impermeável"
-    ]
+    ],
+    image: "/assets/cartilha/19-hv-daily-activity-bath.png",
+    imageAlt: "Banho com sandália cirúrgica e curativo protegido"
   },
   {
     id: 'walking',
@@ -199,7 +217,9 @@ export const dailyActivities: DailyActivity[] = [
       "Evitar subir e descer escadas repetidamente",
       "Fazer apenas deslocamentos necessários dentro de casa",
       "Progressão conforme avaliação médica"
-    ]
+    ],
+    image: "/assets/cartilha/21-hv-footwear-progression-wide-toe.png",
+    imageAlt: "Progressão de calçados: sandália cirúrgica, tênis largo e sapato confortável"
   },
   {
     id: 'driving',
@@ -219,7 +239,9 @@ export const dailyActivities: DailyActivity[] = [
       "Evitar carregar peso",
       "Atividade física de baixo impacto: a partir do 2º mês (com liberação)",
       "Retorno ao trabalho depende do tipo de atividade — consulte a equipe"
-    ]
+    ],
+    image: "/assets/cartilha/20-hv-work-home-office-elevated-foot.png",
+    imageAlt: "Home office com pé elevado e sandália cirúrgica"
   }
 ];
 

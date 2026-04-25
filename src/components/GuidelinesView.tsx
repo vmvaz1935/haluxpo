@@ -31,6 +31,8 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
               chevronColor={theme.primary}
               bg={theme.primaryLight}
               borderColor={theme.stroke}
+              image={g.image}
+              imageAlt={g.imageAlt}
             >
               <ul className="mt-3 space-y-1.5 pl-2">
                 {g.items.map((item, idx) => (
@@ -146,6 +148,8 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
               chevronColor={theme.medicalSage}
               bg={theme.medicalSageSoft}
               borderColor="rgba(125, 148, 137, 0.2)"
+              image={a.image}
+              imageAlt={a.imageAlt}
             >
               <ul className="mt-3 space-y-1.5 pl-2">
                 {a.items.map((item, idx) => (
@@ -165,6 +169,21 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
         title="Perguntas Frequentes"
         icon={<Info className="mr-2 shrink-0" style={{ color: theme.primary }} />}
       >
+        <div
+          className="mb-4 overflow-hidden"
+          style={{
+            background: theme.surfaceSoft,
+            border: `1px solid ${theme.stroke}`,
+            borderRadius: theme.radiusSm,
+          }}
+        >
+          <img
+            src="/assets/cartilha/23-hv-myths-and-truths.png"
+            alt="Mitos e verdades sobre hálux valgo e o pós-operatório"
+            loading="lazy"
+            style={{ display: 'block', width: '100%', height: 'auto' }}
+          />
+        </div>
         <div className="space-y-2.5">
           {faqs.map((faq, idx) => (
             <div
@@ -217,6 +236,21 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
         >
           <AlertCircle className="mr-2 shrink-0" style={{ color: 'rgba(255,255,255,0.8)' }} /> 🚨 Sinais de Alerta
         </h2>
+        <div
+          className="mb-3 overflow-hidden"
+          style={{
+            background: 'rgba(255,255,255,0.1)',
+            border: '1px solid rgba(255,255,255,0.2)',
+            borderRadius: theme.radiusSm,
+          }}
+        >
+          <img
+            src="/assets/cartilha/18-hv-warning-signs.png"
+            alt="Quando procurar a equipe: sinal calmo de orientação"
+            loading="lazy"
+            style={{ display: 'block', width: '100%', height: 'auto' }}
+          />
+        </div>
         <p className="mb-3 font-semibold text-white" style={{ fontSize: '0.85rem' }}>Procure atendimento imediato se apresentar:</p>
         <div className="space-y-2">
           {warningSigns.map((sign, idx) => (
@@ -233,6 +267,36 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
               <span className="text-white" style={{ lineHeight: '1.45', fontSize: '0.82rem' }}>{sign}</span>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Prevenção positiva */}
+      <div
+        className="overflow-hidden"
+        style={{
+          background: theme.white,
+          border: `1px solid ${theme.stroke}`,
+          borderRadius: theme.radiusLg,
+          boxShadow: theme.shadowSm,
+        }}
+      >
+        <img
+          src="/assets/cartilha/17-hv-risks-prevention.png"
+          alt="Cuidados preventivos: higiene, fisioterapia, hidratação e acompanhamento"
+          loading="lazy"
+          style={{ display: 'block', width: '100%', height: 'auto' }}
+        />
+        <div className="px-4 sm:px-6 py-4">
+          <p
+            className="font-bold mb-1"
+            style={{ color: theme.primaryDark, fontFamily: "'Poppins', sans-serif", fontSize: '0.9rem' }}
+          >
+            Prevenção e cuidados que ajudam
+          </p>
+          <p style={{ color: theme.textMuted, fontSize: '0.78rem', lineHeight: '1.55' }}>
+            Higiene, não fumar, controle da carga, fisioterapia, hidratação e acompanhamento médico contribuem para uma
+            cicatrização e consolidação ósseas mais previsíveis.
+          </p>
         </div>
       </div>
 
@@ -277,6 +341,21 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
         >
           <Award className="mr-2 shrink-0" style={{ color: 'rgba(255,255,255,0.8)' }} /> Marcos da Recuperação
         </h2>
+        <div
+          className="mb-4 overflow-hidden"
+          style={{
+            background: 'rgba(255,255,255,0.1)',
+            border: '1px solid rgba(255,255,255,0.2)',
+            borderRadius: theme.radiusSm,
+          }}
+        >
+          <img
+            src="/assets/cartilha/15-hv-recovery-milestones.png"
+            alt="Marcos de recuperação: atividade de baixo impacto e controle clínico"
+            loading="lazy"
+            style={{ display: 'block', width: '100%', height: 'auto' }}
+          />
+        </div>
         <div className="space-y-2.5">
           {milestones.map((m) => (
             <div
@@ -320,6 +399,64 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
         </div>
       </div>
 
+      {/* Profissional certo + agendamento */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div
+          className="overflow-hidden"
+          style={{
+            background: theme.white,
+            border: `1px solid ${theme.stroke}`,
+            borderRadius: theme.radiusLg,
+            boxShadow: theme.shadowSm,
+          }}
+        >
+          <img
+            src="/assets/cartilha/25-hv-choose-right-professional.png"
+            alt="Como escolher o profissional certo: especialista em pé e tornozelo"
+            loading="lazy"
+            style={{ display: 'block', width: '100%', height: 'auto' }}
+          />
+          <div className="px-4 py-3">
+            <p
+              className="font-bold mb-1"
+              style={{ color: theme.primaryDark, fontFamily: "'Poppins', sans-serif", fontSize: '0.88rem' }}
+            >
+              Profissional certo
+            </p>
+            <p style={{ color: theme.textMuted, fontSize: '0.76rem', lineHeight: '1.55' }}>
+              Especialista em pé e tornozelo, equipe multidisciplinar e avaliação individualizada.
+            </p>
+          </div>
+        </div>
+        <div
+          className="overflow-hidden"
+          style={{
+            background: theme.white,
+            border: `1px solid ${theme.stroke}`,
+            borderRadius: theme.radiusLg,
+            boxShadow: theme.shadowSm,
+          }}
+        >
+          <img
+            src="/assets/cartilha/27-hv-schedule-evaluation.png"
+            alt="Agende sua avaliação: agenda e localização da clínica"
+            loading="lazy"
+            style={{ display: 'block', width: '100%', height: 'auto' }}
+          />
+          <div className="px-4 py-3">
+            <p
+              className="font-bold mb-1"
+              style={{ color: theme.primaryDark, fontFamily: "'Poppins', sans-serif", fontSize: '0.88rem' }}
+            >
+              Agende sua avaliação
+            </p>
+            <p style={{ color: theme.textMuted, fontSize: '0.76rem', lineHeight: '1.55' }}>
+              Agendamento individualizado para discutir o seu caso e traçar o plano mais adequado.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Contatos */}
       <div
         className="p-4 sm:p-6"
@@ -336,6 +473,21 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
         >
           <Phone className="mr-2 shrink-0" style={{ color: theme.primary }} /> Contatos e Informações
         </h2>
+        <div
+          className="mb-4 overflow-hidden"
+          style={{
+            background: theme.surfaceSoft,
+            border: `1px solid ${theme.stroke}`,
+            borderRadius: theme.radiusSm,
+          }}
+        >
+          <img
+            src="/assets/cartilha/28-hv-contact-location.png"
+            alt="Contatos e localização da clínica em São Paulo (Berrini/Brooklin)"
+            loading="lazy"
+            style={{ display: 'block', width: '100%', height: 'auto' }}
+          />
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <ContactItem icon={<Users size={18} />} title="Médica Responsável">
             <p className="font-semibold" style={{ color: theme.textSecondary, fontSize: '0.85rem' }}>Dra. Laice Cunha</p>
@@ -405,7 +557,7 @@ function Section({ title, icon, children }: { title: string; icon: React.ReactNo
   );
 }
 
-function AccordionItem({ isOpen, onToggle, icon, title, iconBg, titleColor, chevronColor, bg, borderColor, children }: {
+function AccordionItem({ isOpen, onToggle, icon, title, iconBg, titleColor, chevronColor, bg, borderColor, image, imageAlt, children }: {
   isOpen: boolean;
   onToggle: () => void;
   icon: React.ReactNode;
@@ -415,6 +567,8 @@ function AccordionItem({ isOpen, onToggle, icon, title, iconBg, titleColor, chev
   chevronColor: string;
   bg: string;
   borderColor: string;
+  image?: string;
+  imageAlt?: string;
   children: React.ReactNode;
 }) {
   return (
@@ -441,7 +595,28 @@ function AccordionItem({ isOpen, onToggle, icon, title, iconBg, titleColor, chev
           {isOpen ? <ChevronUp size={18} style={{ color: chevronColor }} /> : <ChevronDown size={18} style={{ color: chevronColor }} />}
         </div>
       </div>
-      {isOpen && <div className="animate-slideDown">{children}</div>}
+      {isOpen && (
+        <div className="animate-slideDown">
+          {image && (
+            <div
+              className="mt-3 overflow-hidden"
+              style={{
+                background: theme.white,
+                border: `1px solid ${borderColor}`,
+                borderRadius: theme.radiusSm,
+              }}
+            >
+              <img
+                src={image}
+                alt={imageAlt ?? title}
+                loading="lazy"
+                style={{ display: 'block', width: '100%', height: 'auto' }}
+              />
+            </div>
+          )}
+          {children}
+        </div>
+      )}
     </div>
   );
 }

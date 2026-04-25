@@ -21,6 +21,8 @@ export interface Phase {
   toDos: string[];
   avoid: string[];
   exercises: string[];
+  image?: string;
+  imageAlt?: string;
 }
 
 export interface TimelineItem {
@@ -33,6 +35,8 @@ export interface Guideline {
   title: string;
   icon: ReactNode;
   items: string[];
+  image?: string;
+  imageAlt?: string;
 }
 
 export interface DailyActivity {
@@ -40,6 +44,8 @@ export interface DailyActivity {
   title: string;
   icon: ReactNode;
   items: string[];
+  image?: string;
+  imageAlt?: string;
 }
 
 export interface Milestone {

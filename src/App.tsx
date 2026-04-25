@@ -155,6 +155,22 @@ export default function App() {
 
         {/* Footer */}
         <footer className="text-center pb-6 px-4" style={{ borderTop: `1px solid ${theme.stroke}`, paddingTop: '1.5rem' }}>
+          <div
+            className="mx-auto mb-4 overflow-hidden"
+            style={{
+              maxWidth: '420px',
+              borderRadius: theme.radiusMd,
+              border: `1px solid ${theme.stroke}`,
+              background: theme.surfaceSoft,
+            }}
+          >
+            <img
+              src="/assets/cartilha/29-hv-ethical-closing-footer.png"
+              alt="Encerramento ético: cuidado, responsabilidade e educação"
+              loading="lazy"
+              style={{ display: 'block', width: '100%', height: 'auto' }}
+            />
+          </div>
           <div className="w-10 h-0.5 mx-auto mb-3" style={{ backgroundColor: theme.primaryLight, borderRadius: '2px' }} />
           <p className="font-bold" style={{ color: theme.primaryDark, fontFamily: "'Poppins', sans-serif", fontSize: '0.8rem' }}>
             Guia de Recuperação Pós-Operatória

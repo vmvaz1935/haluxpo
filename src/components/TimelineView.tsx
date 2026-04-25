@@ -20,9 +20,25 @@ export default function TimelineView() {
         >
           <BarChart2 className="mr-2 shrink-0" style={{ color: theme.primary }} /> Marcos da Recuperação
         </h2>
-        <p className="mb-5" style={{ color: theme.textMuted, lineHeight: '1.6', fontSize: '0.82rem' }}>
+        <p className="mb-4" style={{ color: theme.textMuted, lineHeight: '1.6', fontSize: '0.82rem' }}>
           Estimativa de quando você poderá retomar atividades.
         </p>
+
+        <div
+          className="mb-5 overflow-hidden"
+          style={{
+            background: theme.surfaceSoft,
+            border: `1px solid ${theme.stroke}`,
+            borderRadius: theme.radiusSm,
+          }}
+        >
+          <img
+            src="/assets/cartilha/14-hv-recovery-timeline.png"
+            alt="Linha do tempo vertical com marcos da recuperação pós-operatória"
+            loading="lazy"
+            style={{ display: 'block', width: '100%', height: 'auto' }}
+          />
+        </div>
 
         <div className="relative pl-5 space-y-6" style={{ borderLeft: `2px solid ${theme.primaryLight}` }}>
           {timeline.map((item, idx) => (
@@ -76,6 +92,34 @@ export default function TimelineView() {
       </div>
 
       <div
+        className="overflow-hidden"
+        style={{
+          background: theme.white,
+          border: `1px solid ${theme.stroke}`,
+          borderRadius: theme.radiusLg,
+          boxShadow: theme.shadowSm,
+        }}
+      >
+        <img
+          src="/assets/cartilha/26-hv-patient-journey.png"
+          alt="Jornada da paciente: avaliação, planejamento, preparo, hospital e reabilitação"
+          loading="lazy"
+          style={{ display: 'block', width: '100%', height: 'auto' }}
+        />
+        <div className="px-4 sm:px-6 py-4">
+          <p
+            className="font-bold mb-1"
+            style={{ color: theme.primaryDark, fontFamily: "'Poppins', sans-serif", fontSize: '0.9rem' }}
+          >
+            Jornada da paciente
+          </p>
+          <p style={{ color: theme.textMuted, fontSize: '0.78rem', lineHeight: '1.55' }}>
+            Avaliação inicial, planejamento individualizado, preparo, cuidado hospitalar e reabilitação com fisioterapia.
+          </p>
+        </div>
+      </div>
+
+      <div
         className="p-4 sm:p-6 relative overflow-hidden"
         style={{
           background: 'linear-gradient(160deg, #c9a66b 0%, #b78b4c 40%, #9a7239 100%)',
@@ -114,6 +158,35 @@ export default function TimelineView() {
           </div>
           <p className="mt-4 italic" style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.72rem' }}>
             *A liberação progressiva de calçados e atividades depende da consolidação óssea. Controle radiográfico no retorno.
+          </p>
+        </div>
+      </div>
+
+      <div
+        className="overflow-hidden"
+        style={{
+          background: theme.white,
+          border: `1px solid ${theme.stroke}`,
+          borderRadius: theme.radiusLg,
+          boxShadow: theme.shadowSm,
+        }}
+      >
+        <img
+          src="/assets/cartilha/16-hv-realistic-expectations.png"
+          alt="Expectativa realista: equilíbrio entre função do pé e calçado confortável"
+          loading="lazy"
+          style={{ display: 'block', width: '100%', height: 'auto' }}
+        />
+        <div className="px-4 sm:px-6 py-4">
+          <p
+            className="font-bold mb-1"
+            style={{ color: theme.primaryDark, fontFamily: "'Poppins', sans-serif", fontSize: '0.9rem' }}
+          >
+            Expectativas realistas
+          </p>
+          <p style={{ color: theme.textMuted, fontSize: '0.78rem', lineHeight: '1.55' }}>
+            O foco do tratamento é função, conforto ao caminhar e adequação ao calçado — a evolução é individual e
+            depende da consolidação óssea e do programa de reabilitação.
           </p>
         </div>
       </div>

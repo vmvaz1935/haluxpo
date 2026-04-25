@@ -88,6 +88,23 @@ export default function PhaseCard({ phase, isActive, onClick }: PhaseCardProps) 
 
       {isActive && (
         <div className="mt-5 animate-slideDown" onClick={(e) => e.stopPropagation()}>
+          {phase.image && (
+            <div
+              className="mb-4 overflow-hidden"
+              style={{
+                background: theme.surfaceSoft,
+                border: `1px solid ${theme.stroke}`,
+                borderRadius: theme.radiusSm,
+              }}
+            >
+              <img
+                src={phase.image}
+                alt={phase.imageAlt ?? phase.title}
+                loading="lazy"
+                style={{ display: 'block', width: '100%', height: 'auto' }}
+              />
+            </div>
+          )}
           <p
             className="mb-5 text-sm p-3.5"
             style={{

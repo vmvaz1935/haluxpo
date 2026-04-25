@@ -18,9 +18,25 @@ export default function IntroScreen({ onStart }: IntroScreenProps) {
       <img
         src="/design-system/assets/logo-branca.png.webp"
         alt="Logo"
-        className="mb-6"
+        className="mb-5"
         style={{ maxHeight: '80px', maxWidth: '240px', height: 'auto', width: 'auto' }}
       />
+      <div
+        className="mb-6 overflow-hidden"
+        style={{
+          width: '100%',
+          maxWidth: '320px',
+          borderRadius: theme.radiusLg,
+          border: '1px solid rgba(255,255,255,0.25)',
+          boxShadow: '0 12px 36px rgba(0,0,0,0.18)',
+        }}
+      >
+        <img
+          src="/assets/cartilha/01-cover-hero-hallux-valgus.png"
+          alt="Capa: pés cuidados em recuperação pós-operatória de hálux valgo"
+          style={{ display: 'block', width: '100%', height: 'auto' }}
+        />
+      </div>
       <h1
         className="font-bold mb-3"
         style={{
@@ -60,6 +76,20 @@ export default function IntroScreen({ onStart }: IntroScreenProps) {
           Este material é educativo e geral. Sempre siga as orientações específicas do seu cirurgião, pois o plano de
           recuperação varia conforme a técnica cirúrgica utilizada e suas condições individuais.
         </p>
+        <div
+          className="mt-3 overflow-hidden"
+          style={{
+            borderRadius: theme.radiusSm,
+            border: `1px solid ${theme.stroke}`,
+          }}
+        >
+          <img
+            src="/assets/cartilha/02-important-notice-hallux-valgus.png"
+            alt="Aviso educativo: prancheta com sandália cirúrgica representando orientação segura"
+            loading="lazy"
+            style={{ display: 'block', width: '100%', height: 'auto' }}
+          />
+        </div>
       </div>
 
       <button

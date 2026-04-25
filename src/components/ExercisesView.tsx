@@ -183,24 +183,34 @@ export default function ExercisesView() {
   return (
     <div className="space-y-4 animate-fadeIn">
       <div
-        className="p-4"
+        className="overflow-hidden"
         style={{
-          background: `linear-gradient(135deg, ${theme.white}, ${theme.surfaceSoft})`,
+          background: theme.white,
           border: `1px solid ${theme.stroke}`,
           borderLeft: `4px solid ${theme.primary}`,
           borderRadius: theme.radiusSm,
         }}
       >
-        <h2
-          className="font-bold flex items-center mb-1.5"
-          style={{ color: theme.primaryDark, fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(1rem, 3vw, 1.2rem)' }}
-        >
-          <Activity className="mr-2 shrink-0" style={{ color: theme.primary }} />
-          Exercícios e Mobilizações
-        </h2>
-        <p style={{ color: theme.textSecondary, lineHeight: '1.6', fontSize: '0.82rem' }}>
-          Toque em cada grupo para ver os exercícios com imagem e descrição.
-        </p>
+        <div className="p-4">
+          <h2
+            className="font-bold flex items-center mb-1.5"
+            style={{ color: theme.primaryDark, fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(1rem, 3vw, 1.2rem)' }}
+          >
+            <Activity className="mr-2 shrink-0" style={{ color: theme.primary }} />
+            Exercícios e Mobilizações
+          </h2>
+          <p style={{ color: theme.textSecondary, lineHeight: '1.6', fontSize: '0.82rem' }}>
+            Toque em cada grupo para ver os exercícios com imagem e descrição.
+          </p>
+        </div>
+        <div style={{ background: theme.surfaceSoft, borderTop: `1px solid ${theme.stroke}` }}>
+          <img
+            src="/assets/cartilha/12-hv-hallux-toe-mobilization.png"
+            alt="Mobilização suave do hálux e dos demais dedos após liberação"
+            loading="lazy"
+            style={{ display: 'block', width: '100%', height: 'auto' }}
+          />
+        </div>
       </div>
 
       <div
