@@ -25,18 +25,19 @@ export default function TimelineView() {
         </p>
 
         <div
-          className="mb-5 overflow-hidden"
+          className="mb-5 flex justify-center overflow-hidden"
           style={{
             background: theme.surfaceSoft,
             border: `1px solid ${theme.stroke}`,
             borderRadius: theme.radiusSm,
+            padding: '12px',
           }}
         >
           <img
             src="/assets/cartilha/14-hv-recovery-timeline.png"
             alt="Linha do tempo vertical com marcos da recuperação pós-operatória"
             loading="lazy"
-            style={{ display: 'block', width: '100%', height: 'auto' }}
+            style={{ display: 'block', maxWidth: '100%', maxHeight: '260px', width: 'auto', height: 'auto' }}
           />
         </div>
 
@@ -100,12 +101,17 @@ export default function TimelineView() {
           boxShadow: theme.shadowSm,
         }}
       >
-        <img
-          src="/assets/cartilha/26-hv-patient-journey.png"
-          alt="Jornada da paciente: avaliação, planejamento, preparo, hospital e reabilitação"
-          loading="lazy"
-          style={{ display: 'block', width: '100%', height: 'auto' }}
-        />
+        <div
+          className="flex justify-center"
+          style={{ background: theme.surfaceSoft, padding: '12px', borderBottom: `1px solid ${theme.stroke}` }}
+        >
+          <img
+            src="/assets/cartilha/26-hv-patient-journey.png"
+            alt="Jornada da paciente: avaliação, planejamento, preparo, hospital e reabilitação"
+            loading="lazy"
+            style={{ display: 'block', maxWidth: '100%', maxHeight: '200px', width: 'auto', height: 'auto' }}
+          />
+        </div>
         <div className="px-4 sm:px-6 py-4">
           <p
             className="font-bold mb-1"
@@ -171,12 +177,17 @@ export default function TimelineView() {
           boxShadow: theme.shadowSm,
         }}
       >
-        <img
-          src="/assets/cartilha/16-hv-realistic-expectations.png"
-          alt="Expectativa realista: equilíbrio entre função do pé e calçado confortável"
-          loading="lazy"
-          style={{ display: 'block', width: '100%', height: 'auto' }}
-        />
+        <div
+          className="flex justify-center"
+          style={{ background: theme.surfaceSoft, padding: '12px', borderBottom: `1px solid ${theme.stroke}` }}
+        >
+          <img
+            src="/assets/cartilha/16-hv-realistic-expectations.png"
+            alt="Expectativa realista: equilíbrio entre função do pé e calçado confortável"
+            loading="lazy"
+            style={{ display: 'block', maxWidth: '100%', maxHeight: '220px', width: 'auto', height: 'auto' }}
+          />
+        </div>
         <div className="px-4 sm:px-6 py-4">
           <p
             className="font-bold mb-1"

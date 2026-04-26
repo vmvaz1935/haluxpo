@@ -90,18 +90,19 @@ export default function PhaseCard({ phase, isActive, onClick }: PhaseCardProps) 
         <div className="mt-5 animate-slideDown" onClick={(e) => e.stopPropagation()}>
           {phase.image && (
             <div
-              className="mb-4 overflow-hidden"
+              className="mb-4 flex justify-center overflow-hidden"
               style={{
                 background: theme.surfaceSoft,
                 border: `1px solid ${theme.stroke}`,
                 borderRadius: theme.radiusSm,
+                padding: '12px',
               }}
             >
               <img
                 src={phase.image}
                 alt={phase.imageAlt ?? phase.title}
                 loading="lazy"
-                style={{ display: 'block', width: '100%', height: 'auto' }}
+                style={{ display: 'block', maxWidth: '100%', maxHeight: '220px', width: 'auto', height: 'auto' }}
               />
             </div>
           )}

@@ -25,7 +25,7 @@ export default function IntroScreen({ onStart }: IntroScreenProps) {
         className="mb-6 overflow-hidden"
         style={{
           width: '100%',
-          maxWidth: '320px',
+          maxWidth: '220px',
           borderRadius: theme.radiusLg,
           border: '1px solid rgba(255,255,255,0.25)',
           boxShadow: '0 12px 36px rgba(0,0,0,0.18)',
@@ -77,17 +77,19 @@ export default function IntroScreen({ onStart }: IntroScreenProps) {
           recuperação varia conforme a técnica cirúrgica utilizada e suas condições individuais.
         </p>
         <div
-          className="mt-3 overflow-hidden"
+          className="mt-3 flex justify-center overflow-hidden"
           style={{
             borderRadius: theme.radiusSm,
             border: `1px solid ${theme.stroke}`,
+            background: theme.surfaceSoft,
+            padding: '8px',
           }}
         >
           <img
             src="/assets/cartilha/02-important-notice-hallux-valgus.png"
             alt="Aviso educativo: prancheta com sandália cirúrgica representando orientação segura"
             loading="lazy"
-            style={{ display: 'block', width: '100%', height: 'auto' }}
+            style={{ display: 'block', maxWidth: '100%', maxHeight: '140px', width: 'auto', height: 'auto' }}
           />
         </div>
       </div>

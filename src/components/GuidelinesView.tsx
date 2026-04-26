@@ -170,18 +170,19 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
         icon={<Info className="mr-2 shrink-0" style={{ color: theme.primary }} />}
       >
         <div
-          className="mb-4 overflow-hidden"
+          className="mb-4 flex justify-center overflow-hidden"
           style={{
             background: theme.surfaceSoft,
             border: `1px solid ${theme.stroke}`,
             borderRadius: theme.radiusSm,
+            padding: '12px',
           }}
         >
           <img
             src="/assets/cartilha/23-hv-myths-and-truths.png"
             alt="Mitos e verdades sobre hálux valgo e o pós-operatório"
             loading="lazy"
-            style={{ display: 'block', width: '100%', height: 'auto' }}
+            style={{ display: 'block', maxWidth: '100%', maxHeight: '200px', width: 'auto', height: 'auto' }}
           />
         </div>
         <div className="space-y-2.5">
@@ -237,18 +238,19 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
           <AlertCircle className="mr-2 shrink-0" style={{ color: 'rgba(255,255,255,0.8)' }} /> 🚨 Sinais de Alerta
         </h2>
         <div
-          className="mb-3 overflow-hidden"
+          className="mb-3 flex justify-center overflow-hidden"
           style={{
             background: 'rgba(255,255,255,0.1)',
             border: '1px solid rgba(255,255,255,0.2)',
             borderRadius: theme.radiusSm,
+            padding: '12px',
           }}
         >
           <img
             src="/assets/cartilha/18-hv-warning-signs.png"
             alt="Quando procurar a equipe: sinal calmo de orientação"
             loading="lazy"
-            style={{ display: 'block', width: '100%', height: 'auto' }}
+            style={{ display: 'block', maxWidth: '100%', maxHeight: '160px', width: 'auto', height: 'auto' }}
           />
         </div>
         <p className="mb-3 font-semibold text-white" style={{ fontSize: '0.85rem' }}>Procure atendimento imediato se apresentar:</p>
@@ -280,12 +282,17 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
           boxShadow: theme.shadowSm,
         }}
       >
-        <img
-          src="/assets/cartilha/17-hv-risks-prevention.png"
-          alt="Cuidados preventivos: higiene, fisioterapia, hidratação e acompanhamento"
-          loading="lazy"
-          style={{ display: 'block', width: '100%', height: 'auto' }}
-        />
+        <div
+          className="flex justify-center"
+          style={{ background: theme.surfaceSoft, padding: '12px', borderBottom: `1px solid ${theme.stroke}` }}
+        >
+          <img
+            src="/assets/cartilha/17-hv-risks-prevention.png"
+            alt="Cuidados preventivos: higiene, fisioterapia, hidratação e acompanhamento"
+            loading="lazy"
+            style={{ display: 'block', maxWidth: '100%', maxHeight: '220px', width: 'auto', height: 'auto' }}
+          />
+        </div>
         <div className="px-4 sm:px-6 py-4">
           <p
             className="font-bold mb-1"
@@ -342,18 +349,19 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
           <Award className="mr-2 shrink-0" style={{ color: 'rgba(255,255,255,0.8)' }} /> Marcos da Recuperação
         </h2>
         <div
-          className="mb-4 overflow-hidden"
+          className="mb-4 flex justify-center overflow-hidden"
           style={{
             background: 'rgba(255,255,255,0.1)',
             border: '1px solid rgba(255,255,255,0.2)',
             borderRadius: theme.radiusSm,
+            padding: '12px',
           }}
         >
           <img
             src="/assets/cartilha/15-hv-recovery-milestones.png"
             alt="Marcos de recuperação: atividade de baixo impacto e controle clínico"
             loading="lazy"
-            style={{ display: 'block', width: '100%', height: 'auto' }}
+            style={{ display: 'block', maxWidth: '100%', maxHeight: '180px', width: 'auto', height: 'auto' }}
           />
         </div>
         <div className="space-y-2.5">
@@ -410,12 +418,17 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
             boxShadow: theme.shadowSm,
           }}
         >
-          <img
-            src="/assets/cartilha/25-hv-choose-right-professional.png"
-            alt="Como escolher o profissional certo: especialista em pé e tornozelo"
-            loading="lazy"
-            style={{ display: 'block', width: '100%', height: 'auto' }}
-          />
+          <div
+            className="flex justify-center"
+            style={{ background: theme.surfaceSoft, padding: '10px', borderBottom: `1px solid ${theme.stroke}` }}
+          >
+            <img
+              src="/assets/cartilha/25-hv-choose-right-professional.png"
+              alt="Como escolher o profissional certo: especialista em pé e tornozelo"
+              loading="lazy"
+              style={{ display: 'block', maxWidth: '100%', maxHeight: '180px', width: 'auto', height: 'auto' }}
+            />
+          </div>
           <div className="px-4 py-3">
             <p
               className="font-bold mb-1"
@@ -437,12 +450,17 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
             boxShadow: theme.shadowSm,
           }}
         >
-          <img
-            src="/assets/cartilha/27-hv-schedule-evaluation.png"
-            alt="Agende sua avaliação: agenda e localização da clínica"
-            loading="lazy"
-            style={{ display: 'block', width: '100%', height: 'auto' }}
-          />
+          <div
+            className="flex justify-center"
+            style={{ background: theme.surfaceSoft, padding: '10px', borderBottom: `1px solid ${theme.stroke}` }}
+          >
+            <img
+              src="/assets/cartilha/27-hv-schedule-evaluation.png"
+              alt="Agende sua avaliação: agenda e localização da clínica"
+              loading="lazy"
+              style={{ display: 'block', maxWidth: '100%', maxHeight: '180px', width: 'auto', height: 'auto' }}
+            />
+          </div>
           <div className="px-4 py-3">
             <p
               className="font-bold mb-1"
@@ -474,18 +492,19 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
           <Phone className="mr-2 shrink-0" style={{ color: theme.primary }} /> Contatos e Informações
         </h2>
         <div
-          className="mb-4 overflow-hidden"
+          className="mb-4 flex justify-center overflow-hidden"
           style={{
             background: theme.surfaceSoft,
             border: `1px solid ${theme.stroke}`,
             borderRadius: theme.radiusSm,
+            padding: '12px',
           }}
         >
           <img
             src="/assets/cartilha/28-hv-contact-location.png"
             alt="Contatos e localização da clínica em São Paulo (Berrini/Brooklin)"
             loading="lazy"
-            style={{ display: 'block', width: '100%', height: 'auto' }}
+            style={{ display: 'block', maxWidth: '100%', maxHeight: '180px', width: 'auto', height: 'auto' }}
           />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -599,18 +618,19 @@ function AccordionItem({ isOpen, onToggle, icon, title, iconBg, titleColor, chev
         <div className="animate-slideDown">
           {image && (
             <div
-              className="mt-3 overflow-hidden"
+              className="mt-3 flex justify-center overflow-hidden"
               style={{
                 background: theme.white,
                 border: `1px solid ${borderColor}`,
                 borderRadius: theme.radiusSm,
+                padding: '10px',
               }}
             >
               <img
                 src={image}
                 alt={imageAlt ?? title}
                 loading="lazy"
-                style={{ display: 'block', width: '100%', height: 'auto' }}
+                style={{ display: 'block', maxWidth: '100%', maxHeight: '160px', width: 'auto', height: 'auto' }}
               />
             </div>
           )}

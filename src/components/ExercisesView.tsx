@@ -203,12 +203,19 @@ export default function ExercisesView() {
             Toque em cada grupo para ver os exercícios com imagem e descrição.
           </p>
         </div>
-        <div style={{ background: theme.surfaceSoft, borderTop: `1px solid ${theme.stroke}` }}>
+        <div
+          className="flex justify-center"
+          style={{
+            background: theme.surfaceSoft,
+            borderTop: `1px solid ${theme.stroke}`,
+            padding: '12px',
+          }}
+        >
           <img
             src="/assets/cartilha/12-hv-hallux-toe-mobilization.png"
             alt="Mobilização suave do hálux e dos demais dedos após liberação"
             loading="lazy"
-            style={{ display: 'block', width: '100%', height: 'auto' }}
+            style={{ display: 'block', maxWidth: '100%', maxHeight: '200px', width: 'auto', height: 'auto' }}
           />
         </div>
       </div>
