@@ -57,7 +57,15 @@ function ExerciseCard({ exercise, index }: { exercise: Exercise; index: number }
       </div>
 
       {expanded && (
-        <div className="animate-slideDown" onClick={(e) => e.stopPropagation()}>
+        <div
+          className="animate-slideDown"
+          onClick={(e) => e.stopPropagation()}
+          onAnimationEnd={(e) => {
+            if (e.currentTarget === e.target) {
+              e.currentTarget.style.maxHeight = 'none';
+            }
+          }}
+        >
           <div
             style={{
               background: theme.surfaceSoft,
@@ -169,7 +177,15 @@ function GroupSection({ group }: { group: ExerciseGroup }) {
       </div>
 
       {open && (
-        <div className="p-3 space-y-2 animate-slideDown" style={{ background: theme.white }}>
+        <div
+          className="p-3 space-y-2 animate-slideDown"
+          style={{ background: theme.white }}
+          onAnimationEnd={(e) => {
+            if (e.currentTarget === e.target) {
+              e.currentTarget.style.maxHeight = 'none';
+            }
+          }}
+        >
           {group.exercises.map((ex, idx) => (
             <ExerciseCard key={ex.id} exercise={ex} index={idx} />
           ))}
