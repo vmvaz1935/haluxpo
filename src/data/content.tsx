@@ -169,6 +169,20 @@ export const generalGuidelines: Guideline[] = [
     imageAlt: "Pé elevado sobre travesseiros para controle de edema"
   },
   {
+    id: 'dvt',
+    title: "Prevenção de Trombose (TVP)",
+    icon: <Activity />,
+    items: [
+      "Movimente os dedos e o tornozelo com frequência: puxe o pé para cima e empurre para baixo (movimento de bomba), várias vezes ao dia, mesmo deitada — isso ativa a circulação da perna",
+      "Volte a caminhar assim que a equipe liberar, sempre com a sandália cirúrgica: pequenas caminhadas ao longo do dia ajudam o sangue a circular",
+      "Nos períodos de repouso, mantenha o pé elevado e evite ficar muitas horas totalmente parada",
+      "Beba bastante água ao longo do dia e evite cruzar as pernas por longos períodos",
+      "Em viagens ou trajetos longos, faça pausas para movimentar as pernas",
+      "Use meias de compressão e/ou medicação anticoagulante apenas se forem prescritas pela equipe — não inicie por conta própria",
+      "Avise a equipe se você tem histórico de trombose, usa anticoncepcional/hormônios, é fumante ou tem varizes — pode ser necessário um cuidado extra"
+    ]
+  },
+  {
     id: 'ice',
     title: "Gelo — NÃO utilizar",
     icon: <AlertCircle />,
@@ -353,6 +367,7 @@ export const warningSigns: string[] = [
   "Dor que não melhora com analgésico",
   "Febre acima de 37,8°C",
   "Vermelhidão intensa ou secreção no curativo",
-  "Inchaço súbito e doloroso da panturrilha",
+  "Panturrilha dolorida, inchada, vermelha, quente ou endurecida (possível trombose)",
+  "Falta de ar súbita, dor no peito ou palpitação — procure emergência imediatamente",
   "Sangramento volumoso no curativo"
 ];
