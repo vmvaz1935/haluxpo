@@ -6,6 +6,13 @@ export const Activity = ({ size = 24, className = "", style }: IconProps) => (
   </svg>
 );
 
+export const Pill = ({ size = 24, className = "", style }: IconProps) => (
+  <svg width={size} height={size} className={className} style={style} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.5 20.5l10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.5 8.5l7 7" />
+  </svg>
+);
+
 export const CheckCircle = ({ size = 24, className = "", style }: IconProps) => (
   <svg width={size} height={size} className={className} style={style} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

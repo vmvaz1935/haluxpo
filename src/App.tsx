@@ -176,6 +176,11 @@ export default function App() {
           <p className="font-bold" style={{ color: theme.primaryDark, fontFamily: "'Poppins', sans-serif", fontSize: '0.8rem' }}>
             Guia de Recuperação Pós-Operatória
           </p>
+          <p className="mt-2" style={{ color: theme.textMuted, fontSize: '0.72rem', fontFamily: "'Poppins', sans-serif", lineHeight: 1.5 }}>
+            Dra. Laice Gomes Cunha · Ortopedia e Traumatologia — Cirurgia do Pé e Tornozelo
+            <br />
+            CRM/SP 204325 | RQE 100836
+          </p>
           <p className="mt-2 max-w-xs mx-auto leading-relaxed" style={{ color: theme.textMuted, fontSize: '0.75rem' }}>
             *Este guia é educativo e geral. Sempre consulte seu cirurgião para orientações específicas.
           </p>

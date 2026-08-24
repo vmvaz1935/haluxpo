@@ -1,4 +1,4 @@
-import { Shield, Activity, TrendingUp, Clock, Award, CheckCircle, AlertCircle, Hand } from '../components/Icons';
+import { Shield, Activity, TrendingUp, Clock, Award, CheckCircle, AlertCircle, Hand, Pill } from '../components/Icons';
 import type { Phase, TimelineItem, Guideline, DailyActivity, Milestone, FAQ } from '../types';
 
 export const phases: Phase[] = [
@@ -154,6 +154,20 @@ export const generalGuidelines: Guideline[] = [
     ],
     image: "/assets/cartilha/07-hv-surgical-sandal-forefoot.png",
     imageAlt: "Sandália cirúrgica de descarga do antepé"
+  },
+  {
+    id: 'medications',
+    title: "Medicações",
+    icon: <Pill />,
+    items: [
+      "Siga sempre a receita entregue pela equipe — as doses, os horários e o tempo de uso podem variar conforme o seu caso",
+      "Antibiótico: Zinnat® (cefuroxima) — por 7 dias",
+      "Anti-inflamatório: Alginac® — por 5 dias",
+      "Analgésico para dor leve a moderada: Novalgina®",
+      "Analgésico para dor intensa: Tramadol®",
+      "Após tomar Tramadol, evite dirigir, ingerir álcool ou tomar decisões importantes",
+      "Profilaxia antitrombótica (prevenção de trombose): mantida ou retirada conforme avaliação individual da equipe"
+    ]
   },
   {
     id: 'elevation',
