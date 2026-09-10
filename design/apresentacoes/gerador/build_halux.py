@@ -12,6 +12,10 @@ HALUX = BASE / "haluxpo"
 CACHE = HERE / "cache"
 NOVAS = HERE.parent / "gen" / "out" / "final"       # ilustracoes novas dos exercicios
 
+# As cartilhas seguem com as fotografias originais, entao o deck mostra o mesmo
+# que a paciente ve no app. True troca pelas ilustracoes novas do design system.
+USAR_ILUSTRACOES_NOVAS = False
+
 dados = json.loads((HERE / "halux.json").read_text(encoding="utf-8"))
 
 
@@ -29,15 +33,13 @@ def cartilha(nome):
 
 
 def exercicio_img(exercise):
-    """Prefere a ilustracao nova; cai na foto atual se ela nao existir."""
-    m = re.search(r"/(\d{2})_", exercise["image"])
-    if m:
-        nova = NOVAS / f"{m.group(1)}_{pathlib.Path(exercise['image']).stem.split('_', 1)[1]}-static.webp"
-        if nova.exists():
-            return nova
-        cand = sorted(NOVAS.glob(f"{m.group(1)}_*-static.webp"))
-        if cand:
-            return cand[0]
+    """A foto que esta na cartilha; a ilustracao nova so com a chave ligada."""
+    if USAR_ILUSTRACOES_NOVAS:
+        m = re.search(r"/(\d{2})_", exercise["image"])
+        if m:
+            cand = sorted(NOVAS.glob(f"{m.group(1)}_*-static.webp"))
+            if cand:
+                return cand[0]
     return img(exercise["image"])
 
 

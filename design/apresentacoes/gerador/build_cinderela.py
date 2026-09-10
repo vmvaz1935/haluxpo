@@ -13,7 +13,9 @@ HALUX = BASE / "haluxpo"
 CACHE = HERE / "cache"
 NOVAS = HERE.parent / "gen" / "out" / "final"
 
-USAR_ILUSTRACOES_NOVAS = True     # False volta para as fotos atuais dos exercicios
+# As cartilhas seguem com as fotografias originais, entao o deck mostra o mesmo
+# que a paciente ve no app. True troca pelas ilustracoes novas do design system.
+USAR_ILUSTRACOES_NOVAS = False
 
 dados = json.loads((HERE / "cinderela.json").read_text(encoding="utf-8"))
 ILUS = dados["illustrations"]

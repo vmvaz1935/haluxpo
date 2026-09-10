@@ -33,11 +33,13 @@ Marcadores fora do ASCII (✓ ✕) usam Segoe UI Symbol, que os tem.
 
 ## Imagens dos exercícios
 
-Os slides de exercício usam as **ilustrações novas** do design system
-(`haluxpo/design/exercicios-ilustracoes-2026-09.zip`), não as fotografias que ainda
-estão nas cartilhas. As cartilhas seguem intactas. Para voltar às fotos, mude
-`USAR_ILUSTRACOES_NOVAS = False` no topo de `gerador/build_cinderela.py` (e a função
-`exercicio_img` em `build_halux.py`).
+Os slides de exercício usam as **fotografias que estão hoje nas cartilhas**, para que a
+paciente veja na tela exatamente o mesmo que vai encontrar depois no app.
+
+As ilustrações novas do design system (`haluxpo/design/exercicios-ilustracoes-2026-09.zip`)
+ainda não foram aplicadas às cartilhas, então também não entram aqui. No dia em que
+forem, basta ligar `USAR_ILUSTRACOES_NOVAS = True` no topo de `gerador/build_halux.py` e
+`gerador/build_cinderela.py` e refazer os decks.
 
 ## Refazer os decks
 
