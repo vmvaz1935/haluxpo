@@ -170,6 +170,15 @@ def as_png(src, cache_dir):
     return out
 
 
+def medir_fit(path, w, h, cache_dir):
+    """Tamanho que a imagem tera dentro da caixa, no encaixe 'contain'."""
+    p = as_png(path, cache_dir)
+    iw, ih = Image.open(p).size
+    if iw / ih >= w / h:
+        return Emu(int(w)), Emu(int(w * ih / iw))
+    return Emu(int(h * iw / ih)), Emu(int(h))
+
+
 def picture_fit(slide, path, x, y, w, h, cache_dir):
     """Encaixa a imagem inteira dentro da caixa, centralizada (contain)."""
     p = as_png(path, cache_dir)
@@ -378,9 +387,15 @@ class Deck:
              align=PP_ALIGN.RIGHT, first=True, space_after=0)
         alt = FOOTER_Y - topo - Inches(0.25)
         if imagem:
-            round_rect(s, M, topo, Inches(6.55), alt, SURFACE)
-            picture_fit(s, imagem, M + Inches(0.12), topo + Inches(0.12),
-                        Inches(6.31), alt - Inches(0.24), self.cache)
+            # o cartao acompanha a imagem: as fotos sao retrato e uma caixa fixa
+            # deixaria uma faixa branca larga ao lado
+            pad = Inches(0.14)
+            iw, ih = medir_fit(imagem, Inches(6.55) - 2 * pad, alt - 2 * pad, self.cache)
+            cw, ch = Emu(int(iw + 2 * pad)), Emu(int(ih + 2 * pad))
+            cx = Emu(int(M + (Inches(6.55) - cw) / 2))
+            cy = Emu(int(topo + (alt - ch) / 2))
+            round_rect(s, cx, cy, cw, ch, SURFACE)
+            picture_fit(s, imagem, cx + pad, cy + pad, iw, ih, self.cache)
         tx = M + Inches(6.95)
         tw = W - M - tx
         tf = textbox(s, tx, topo + Inches(0.15), tw, alt - Inches(1.5))
