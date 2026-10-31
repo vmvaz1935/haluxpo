@@ -145,7 +145,7 @@ export const exerciseGroups: ExerciseGroup[] = [
   {
     id: 'functional',
     title: 'Treino Funcional',
-    phase: 'A partir do 2º mês — com carga completa liberada',
+    phase: 'A partir de 8 semanas — com liberação da Dra. Laice',
     exercises: [
       {
         id: 'forward-lean',
@@ -176,7 +176,7 @@ export const exerciseGroups: ExerciseGroup[] = [
   {
     id: 'advanced',
     title: 'Exercícios Avançados',
-    phase: 'A partir do 3º mês — com liberação médica, conforme consolidação óssea',
+    phase: 'A partir de 12 semanas — com liberação da Dra. Laice',
     exercises: [
       {
         id: 'lunges',

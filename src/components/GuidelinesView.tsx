@@ -1,5 +1,5 @@
 import { theme } from '../theme';
-import { generalGuidelines, dailyActivities, faqs, warningSigns, milestones } from '../data/content';
+import { generalGuidelines, dailyActivities, faqs, emergencySigns, warningSigns, milestones } from '../data/content';
 import {
   Shield, Activity, Info, AlertCircle, Award, ChevronDown, ChevronUp,
   Hand, Phone, Users, UserCircle, Mail, MapPin, Globe,
@@ -253,7 +253,14 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
             style={{ display: 'block', maxWidth: '100%', maxHeight: '160px', width: 'auto', height: 'auto' }}
           />
         </div>
-        <p className="mb-3 font-semibold text-white" style={{ fontSize: '0.85rem' }}>Procure atendimento imediato se apresentar:</p>
+        <div
+          className="mb-3 p-3"
+          style={{ background: '#fff', color: '#991b1b', borderRadius: theme.radiusSm, fontSize: '0.84rem', lineHeight: '1.5', fontWeight: 500 }}
+        >
+          <strong style={{ fontFamily: "'Poppins', sans-serif" }}>Vá ao pronto-socorro imediatamente</strong> se tiver:{' '}
+          {emergencySigns.join(', ').toLowerCase()}. Depois avise a equipe.
+        </div>
+        <p className="mb-3 font-semibold text-white" style={{ fontSize: '0.85rem' }}>Avise a equipe no mesmo dia se tiver:</p>
         <div className="space-y-2">
           {warningSigns.map((sign, idx) => (
             <div
@@ -324,7 +331,7 @@ export default function GuidelinesView({ expandedSection, setExpandedSection }: 
           <Info className="mr-2 shrink-0" style={{ color: theme.primary }} /> Quando ligar para o consultório:
         </h3>
         <ul className="space-y-1.5" style={{ color: theme.textSecondary }}>
-          {['Dúvidas sobre medicação', 'Preocupações sobre progresso da recuperação', 'Alterações que causem preocupação'].map((item, idx) => (
+          {['Dúvidas sobre medicação', 'Antes de viagens com mais de 2 horas nas primeiras 6 semanas', 'Preocupações sobre progresso da recuperação', 'Alterações que causem preocupação'].map((item, idx) => (
             <li key={idx} className="flex items-start" style={{ fontSize: '0.82rem' }}>
               <span className="w-1.5 h-1.5 rounded-full mt-1.5 mr-2 shrink-0" style={{ backgroundColor: theme.primary }} />
               {item}
