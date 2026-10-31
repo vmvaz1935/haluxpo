@@ -142,9 +142,10 @@ export default function TimelineView() {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { val: '2 meses', label: 'Atividade física de baixo impacto' },
-              { val: '3 meses', label: 'Liberação de calçados e atividade de maior impacto' },
-              { val: '6 meses', label: 'Alta médica' },
+              { val: '2 semanas', label: 'Repouso em casa e retirada dos pontos' },
+              { val: '6 semanas', label: 'Saem a sandália e os curativos; começa a fisioterapia' },
+              { val: '12 semanas', label: 'Tudo liberado, inclusive salto, corrida e saltos' },
+              { val: '6 a 8 meses', label: 'Resultado final' },
             ].map((item, i) => (
               <div
                 key={i}
@@ -163,7 +164,7 @@ export default function TimelineView() {
             ))}
           </div>
           <p className="mt-4 italic" style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.72rem' }}>
-            *A liberação progressiva de calçados e atividades depende da consolidação óssea. Controle radiográfico no retorno.
+            *Cada etapa só começa quando a Dra. Laice liberar no retorno. Retornos semanais até 6 semanas, depois com 8 semanas, 3, 4 e 6 meses.
           </p>
         </div>
       </div>
